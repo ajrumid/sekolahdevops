@@ -47,4 +47,4 @@ sudo mysql -u root -p"Abcd1234567890-" -e "CREATE USER 'devopscilsy'@'localhost'
 sudo mysql -u root -p"Abcd1234567890-" -e "GRANT ALL PRIVILLAGES ON *.* to 'devopscilsy'@'localhost';"
 sudo mysql -u "devopscilsy" -p"1234567890-" -e "CREATE DATABASE wordpress;"
 sudo mysql -u "devopscilsy" -p"1234567890-" -s "show databases;"
-sudo -u www-data cp /home/rumi/vagrant/wp-config.php /srv/www/wordpress/wp-config.php
+sudo -u www-data cp /home/rumi/vagrantproject/vagrant/wp-config.php /srv/www/wordpress/wp-config.php
