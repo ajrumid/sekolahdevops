@@ -8,6 +8,6 @@ wget https://github.com/sdcilsy/landing-page/archive/refs/heads/master.zip
 echo "Memindahkan data"
 sudo rm /var/www/html/* 
 sudo rm -R /var/www/html
-sudo mv landing-page-master/* /var/www/html
+sudo mv landing-page/* /var/www/html
 echo "restart service apache2"
 systemctl restart apache2
