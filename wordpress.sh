@@ -17,8 +17,8 @@ sudo apt install apache2 \
                  php-xml \
                  php-zip
 sudo mkdir -p /svr/www
-sudo chown www-data: /srv/www
-curl https://wordpress.org/latest.tar.gz | sudo -u www-data tar zx -C /srv/www
+sudo chown www-data: /svr/www
+curl https://wordpress.org/latest.tar.gz | sudo -u www-data tar zx -C /svr/www
 sudo touch /etc/apache2/sites-available/wordpress.conf
 sudo bash -c "cat > /etc/apache2/site-available/wordpress.conf" <<EOF
 <VirtualHost *:80>
@@ -29,7 +29,7 @@ sudo bash -c "cat > /etc/apache2/site-available/wordpress.conf" <<EOF
         DirectoryIndex index.php
         Require all granted
     </Directory>
-    <Directory /srv/www/wordpress/wp-content>
+    <Directory /svr/www/wordpress/wp-content>
         Options FollowSymLinks
         Required all granted
     </Directory>
